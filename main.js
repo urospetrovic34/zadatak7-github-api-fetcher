@@ -25,7 +25,7 @@ const fillUser = (searchName) => {
     document.querySelector(".warning").classList.remove("visible")
     if(searchName!=="")
     {
-        fetch(`https://api.github.com/users/${searchName}`,{headers:{'Authorization':'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'}}).then(function (response) {
+        fetch(`https://api.github.com/users/${searchName}`).then(function (response) {
             if(response.ok) 
             {
                 return response.json()
